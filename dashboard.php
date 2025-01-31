@@ -60,12 +60,12 @@
                     <input type="text" id="fName" name="fName" placeholder="First Name" class="input-text" required>
                     </div>
                     <div>
-                    <label for="lName">Last Name</label><br>
+                    <label for="lName">Middle Name</label><br>
                     <input type="text" id="lName" name="lName" class="input-text" required>
                     </div>
                     <div>
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email"  class="input-text" required>
+                    <label for="email">Surname</label><br>
+                    <input type="text" id="surname" name="surname"  class="input-text" required>
                     </div>
                     <div>
                     <label for="suffix">Suffix</label><br>
@@ -79,20 +79,20 @@
                     </div>
                 </div>
                 <div class="input-row">
-                <div>
+                <div> 
                     <label for="sex">Sex</label><br>
-                    <input type="radio" id="male" name="sex" value="male">
+                    <input type="radio" id="male" name="sex" value="male" class="input-radio">
                     <label for="male">Male</label>
-                    <input type="radio" id="female" name="sex" value="female">
+                    <input type="radio" id="female" name="sex" value="female" class="input-radio">
                     <label for="female">Female</label>
                 </div>
                 <div>
                     <label for="DOB">Date of Birth</label><br>
-                    <input type="date" id="DOB" name="DOB" required>
+                    <input type="date" id="DOB" name="DOB" class="input-text" required>
                 </div>
                 <div>
                     <label for="maritalStatus">Marital Status</label></label><br>
-                    <select id="maritalStatus" name="maritalStatus">
+                    <select id="maritalStatus" name="maritalStatus" class="input-text">
                         <option value="">Select marital status</option>
                         <option value="single">Single</option>
                         <option value="married">Married</option>
@@ -102,7 +102,7 @@
                 </div>
                 <div>
                     <label for="contactNo">Contact Number</label><br>
-                    <input type="tel" id="contactNo" name="contactNo" required>
+                    <input type="tel" id="contactNo" name="contactNo" required class="input-text">
                 </div>
                 </div>
 
@@ -111,31 +111,31 @@
 
                 <div>
                 <label for="homeNo">Home Number</label><br>
-                <input type="text" id="homeNo" name="homeNo" required>
+                <input type="text" id="homeNo" name="homeNo" class="input-text" required>
                 </div>
                 <div>
                 <label for="street">Street</label><br>
-                <input type="text" id="street" name="street" required>
+                <input type="text" id="street" name="street" class="input-text" required>
                 </div>
                 <div>
                 <label for="baranggay">Baranggay</label><br>
-                <input type="text" id="baranggay" name="baranggay" required>
+                <input type="text" id="baranggay" name="baranggay" class="input-text" required>
                 </div>
                 <div>
                 <label for="city">City</label><br>
-                <input type="text" id="city" name="city" required>
+                <input type="text" id="city" name="city" class="input-text" required>
                 </div>
 
                 </div>
-                <div class="input-row">
+                <div class="input-row-few">
                     
                 <div>
                 <label for="province">Province</label><br>
-                <input type="text" id="province" name="province" required>
+                <input type="text" id="province" name="province" class="input-text" required>
                 </div>
                 <div>
                 <label for="region">Region</label><br>
-                <input type="text" id="region" name="region" required>
+                <input type="text" id="region" name="region" class="input-text" required>
                 </div>
 
                 </div>
@@ -145,7 +145,7 @@
 
                     <div>
                     <label for="idType">Type of ID</label><br>
-                    <select name="idType" id="idType">
+                    <select name="idType" id="idType" class="input-text">
                         <option value="SSS">SSS</option>
                         <option value="TIN">TIN</option>
                         <option value="PAGIBIG">PAGIBIG</option>
@@ -162,15 +162,15 @@
                     </div>
                     <div>
                     <label for="idNo">ID Number</label><br>
-                    <input type="text" id="idNo" name="idNo" required>
+                    <input type="text" id="idNo" name="idNo" class="input-text" required >
                     </div>
                     <div>
                         <label for="expiryDate">Expiry Date</label><br>
-                        <input type="date" id="expiryDate" name="expiryDate" required>
+                        <input type="date" id="expiryDate" name="expiryDate" class="input-text" required>
                     </div>
                     <div>
                         <label for="photo">Upload photo of ID</label><br>
-                        <input type="file" id="idPhoto" name="idPhoto">
+                        <input type="file" id="idPhoto" name="idPhoto" >
                     </div>
 
                 </div>
@@ -179,25 +179,25 @@
                 <div class="input-row">
                     <div>
                         <label for="employerName">Name of Employer</label><br>
-                        <input type="text" id="employerName" name="employerName" required>
+                        <input type="text" id="employerName" name="employerName" class="input-text" required>
                     </div>
                     <div>
                         <label for="noOfYearsWorked">No. of Years with Employer</label><br>
-                        <input type="number" id="noOfYearsWorked" name="noOfYearsWorked" required>
+                        <input type="number" id="noOfYearsWorked" class="input-text" name="noOfYearsWorked" required>
                     </div>
                     <div>
                         <label for="position">Position</label><br>
-                        <input type="text" id="position" name="position">
+                        <input type="text" id="position" name="position" class="input-text">
                     </div>
                     <div>
                         <label for="phoneNoEmployer">Employer's Phone Number</label><br>
-                        <input type="tel" id="phoneNoEmployer" name="phoneNoEmployer">
+                        <input type="tel" id="phoneNoEmployer" name="phoneNoEmployer" class="input-text">
                     </div>
                 </div>
                 <div class="input-row">
                     <div>
                         <label for="salary">Salary</label><br>
-                        <input type="number" id="salary" name="salary">
+                        <input type="number" id="salary" name="salary" class="input-text">
                     </div>
                 </div>
 
@@ -205,29 +205,29 @@
                 <div class="input-row">
                     <div>
                     <label for="homeNo">Home Number</label><br>
-                    <input type="text" id="homeNo" name="homeNo" required>
+                    <input type="text" id="homeNo" name="homeNo" class="input-text" required>
                     </div>
                     <div>
                     <label for="street">Street</label><br>
-                    <input type="text" id="street" name="street" required>
+                    <input type="text" id="street" name="street" class="input-text" required>
                     </div>
                     <div>
                     <label for="baranggay">Baranggay</label><br>
-                    <input type="text" id="baranggay" name="baranggay" required>
+                    <input type="text" id="baranggay" name="baranggay" class="input-text" required>
                     </div>
                     <div>
                     <label for="city">City</label><br>
-                    <input type="text" id="city" name="city" required>
+                    <input type="text" id="city" name="city" class="input-text" required>
                     </div>
                 </div>
-                <div class="input-row">
+                <div class="input-row-few">
                     <div>
                     <label for="province">Province</label><br>
-                    <input type="text" id="province" name="province" required>
+                    <input type="text" id="province" name="province" class="input-text" required>
                     </div>
                     <div>
                     <label for="region">Region</label><br>
-                    <input type="text" id="region" name="region" required>
+                    <input type="text" id="region" name="region" class="input-text" required>
                     </div>
                 </div>
 
@@ -235,7 +235,7 @@
                 <div class="input-row">
                     <div>
                     <label for="insuranceType">Type of Insurance</label><br>
-                    <select name="insuranceType" id="insuranceType">
+                    <select name="insuranceType" id="insuranceType" class="input-text">
                         <option value="Health Insurance">Health Insurance</option>
                         <option value="Life Insurance">Life Insurance</option>
                         <option value="Single Premium">Single Premium</option>
@@ -244,26 +244,26 @@
                     </select>
                     </div>
                     <div>
-                        <label for="issuedDate">Date Issued</label><br>
-                        <input type="date" id="issuedDate" name="issuedDate">
+                        <label for="issuedDate" >Date Issued</label><br>
+                        <input type="date" id="issuedDate" name="issuedDate" class="input-text">
                     </div>
                     <div>
                         <label for="expiryDate">Expiry Date</label><br>
-                        <input type="date" id="expiryDate" name="expiryDate">
+                        <input type="date" id="expiryDate" name="expiryDate" class="input-text">
                     </div>
                     <div>
                         <label for="uploadInsurance">Upload Insurance</label><br>
                         <input type="file">
                     </div>
                 </div> 
-                <div class="input-row">
+                <div class="input-row-few">
                     <div>
                         <label for="dependentName">Name of Dependent</label><br>
-                        <input type="text" id="dependentName" name="dependentName">
+                        <input type="text" id="dependentName" name="dependentName" class="input-text">
                     </div>
                     <div>
                         <label for="dependentContactNo">Dependent Contact No.</label><br>
-                        <input type="tel">
+                        <input type="tel" class="input-text">
                     </div>
                 </div>
 
@@ -280,6 +280,43 @@
             </form>
         </div>
     </div>
+</div>
+
+<div class="table-container">
+    <div class="table-button-container">
+        <div class="table-button-group">
+        <button>All</button>
+        <button>Payment</button>
+        <button>Loan</button>
+        <button>Grocery Item</button>
+        </div>
+
+        <div class="table-button-add">
+            <button>Add new</button>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>Transaction Date</th>
+            <th>Due Date</th>
+            <th>Reference #</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Interest Rate</th>
+            <th>Promisory Note</th>
+            <th>Remarks</th>
+            <th>Balance</th>
+
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>123 Main St</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Doe</td>
+    </table>
 </div>
 </body>
 </html>
