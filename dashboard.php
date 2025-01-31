@@ -103,7 +103,7 @@
                     <input type="tel" id="contactNo" name="contactNo" required>
                 </div>
                 </div>
-                
+
             <h1>Address</h1>
                 <div class="input-row">
 
@@ -232,23 +232,44 @@
             <h1>Insurance Details</h1>
                 <div class="input-row">
                     <div>
+                    <label for="insuranceType">Type of Insurance</label><br>
+                    <select name="insuranceType" id="insuranceType">
+                        <option value="Health Insurance">Health Insurance</option>
+                        <option value="Life Insurance">Life Insurance</option>
+                        <option value="Single Premium">Single Premium</option>
+                        <option value="Family Premium">Family Premium</option>
+                        <option value="None">None</option>
+                    </select>
                     </div>
                     <div>
+                        <label for="issuedDate">Date Issued</label><br>
+                        <input type="date" id="issuedDate" name="issuedDate">
                     </div>
                     <div>
+                        <label for="expiryDate">Expiry Date</label><br>
+                        <input type="date" id="expiryDate" name="expiryDate">
                     </div>
                     <div>
+                        <label for="uploadInsurance">Upload Insurance</label><br>
+                        <input type="file">
                     </div>
                 </div> 
                 <div class="input-row">
                     <div>
+                        <label for="dependentName">Name of Dependent</label><br>
+                        <input type="text" id="dependentName" name="dependentName">
                     </div>
                     <div>
+                        <label for="dependentContactNo">Dependent Contact No.</label><br>
+                        <input type="tel">
                     </div>
                 </div>
+
             <h1>Collateral</h1>  
                 <div class="input-row">
                     <div>
+                        <label for="collateral">Upload Pictures of Collateral</label><br>
+                        <input type="file" multiple>
                     </div>
                 </div> 
             </form>
