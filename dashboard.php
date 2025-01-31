@@ -11,8 +11,9 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <header>
+    <nav>
     <div class="dashboard-container">
+
     <div class="dashboard-header">
         <div class="logo-container">
         <img src="images/dashboard.png" alt="">
@@ -33,19 +34,20 @@
             </div>
         </div>
     </div>
-    </header>
+    </nav>
 
 
 <div class="dashboard-content">
+
     <div class="dashboard-content-button">
         <div class="search-container">
-            <input type="text" placeholder="Search">
-            <button>Search</button>
+            <input type="text" placeholder="Search" class="search-input">
+            <button class="search-btn">Search</button>
         </div>
         <div class="button-container">
-            <button>Add</button>
-            <button>Edit</button>
-            <button>Delete</button>
+            <button class="add-btn">Add</button>
+            <button disabled class="edit-btn">Edit</button>
+            <button disabled class="delete-btn">Delete</button>
         </div>
     </div>
 
@@ -55,19 +57,19 @@
                 <div class="input-row">
                     <div>
                     <label for="fName">First Name</label><br>
-                    <input type="text" id="fName" name="fName" required>
+                    <input type="text" id="fName" name="fName" placeholder="First Name" class="input-text" required>
                     </div>
                     <div>
                     <label for="lName">Last Name</label><br>
-                    <input type="text" id="lName" name="lName" required>
+                    <input type="text" id="lName" name="lName" class="input-text" required>
                     </div>
                     <div>
                     <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email"  class="input-text" required>
                     </div>
                     <div>
                     <label for="suffix">Suffix</label><br>
-                    <select id="suffix" name="suffix">
+                    <select id="suffix" name="suffix"  class="input-text">
                         <option value="">Select suffix</option>
                         <option value="Jr.">Jr.</option>
                         <option value="Sr.">Sr.</option>
@@ -272,6 +274,9 @@
                         <input type="file" multiple>
                     </div>
                 </div> 
+            <div class="button-container">
+            <input type="submit" value="Confirm" class="confirmBtn">
+            </div>
             </form>
         </div>
     </div>

@@ -1,6 +1,9 @@
 *{
     font-family: "Source Serif 4", serif;
 }
+h1{
+    font-weight:900;
+}
 body{
     background-color: #F5F6FA;
     height: 98vh;
@@ -81,6 +84,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: right;
+    gap: 15px;
     align-items: center;
 }
 .form-container{
@@ -95,4 +99,70 @@ body{
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
+
+}
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin-top: 20px;
+}
+.confirmBtn{
+    background-color: #1E3E62;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-btn{
+    background-color: #1E3E62;
+    font-weight: 700;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.edit-btn{
+    background-color: #0B192C;
+    font-weight: 700;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-btn{
+    background-color: #FF0000;
+    font-weight: 700;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 400px;
+}
+.search-btn{
+    background-color: #1E3E62;
+    font-weight: 600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.input-text{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    width: 250px;
 }
