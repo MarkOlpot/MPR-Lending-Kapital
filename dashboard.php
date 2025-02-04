@@ -175,7 +175,7 @@
                     </div>
                     <div>
                         <label for="photo">Upload photo of ID</label><br>
-                        <input type="file" accept="image/*" id="idPhoto" name="idPhoto">
+                        <input type="file" accept="image/*" id="idPhoto" name="idPhoto" class="img-input" disabled>
                         <div id="idPhotoPreview"></div>
 
                     </div>
@@ -260,7 +260,7 @@
                     </div>
                     <div>
                         <label for="uploadInsurance">Upload Insurance</label><br>
-                        <input type="file" id="insurancePhoto" accept="image/*">
+                        <input type="file" id="insurancePhoto" class="img-input" accept="image/*" disabled>
                         <div id="insurancePhotoPreview"></div>
                     </div>
                 </div> 
@@ -279,7 +279,7 @@
                 <div class="input-row">
                     <div>
                         <label for="collateral">Upload Pictures of Collateral</label><br>
-                        <input type="file" accept="image/*" id="collateral" multiple>
+                        <input type="file" accept="image/*" class="img-input" id="collateral" multiple disabled>
                         <div id="collateral-preview"></div> <!-- Add this div for preview -->
                     </div>
                 </div> 

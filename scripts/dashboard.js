@@ -10,12 +10,20 @@ let idPhotoInput = document.getElementById('idPhoto');
 let idPhotoPreview = document.getElementById('idPhotoPreview');
 let insurancePhotoInput = document.getElementById('insurancePhoto');
 let insurancePhotoPreview = document.getElementById('insurancePhotoPreview');
+let imgInput = document.querySelectorAll('.img-input');
 
 addbtn.addEventListener('click',function(){
     console.log('clicked add button');
     addbtn.innerText= addbtn.innerText === "Add" ? "Cancel" : "Add";
     inputText.forEach(input => input.disabled = input.disabled ? false : true)
     radioBtn.forEach(input => input.disabled = input.disabled ? false : true)
+    imgInput.forEach(input => input.disabled = input.disabled? false : true)
+    inputText.forEach(input => input.value = "")
+    radioBtn.forEach(input => input.checked = false)
+    imgInput.forEach(input => input.value = "")
+    collateralPreview.innerHTML = '';
+    idPhotoPreview.innerHTML = '';
+    insurancePhotoPreview.innerHTML = '';
     confirmBtn.style.display = confirmBtn.style.display === "block" ? "none" : "block";
     console.log(addbtn.innerText);
     deletebtn.disabled = true;
