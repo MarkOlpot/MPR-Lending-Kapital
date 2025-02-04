@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/dashboard.css">
+  
      <!-- Google Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <!-- SweetAlert2 -->
+     <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
     <title>Dashboard</title>
 </head>
 <body>
@@ -45,9 +50,9 @@
             <button class="search-btn">Search</button>
         </div>
         <div class="button-container">
-            <button class="add-btn">Add</button>
-            <button disabled class="edit-btn">Edit</button>
-            <button disabled class="delete-btn">Delete</button>
+            <button class="add-btn" id="add-btn">Add</button>
+            <button disabled class="edit-btn" id="edit-btn">Edit</button>
+            <button disabled class="delete-btn" id="delete-btn">Delete</button>
         </div>
     </div>
 
@@ -57,19 +62,19 @@
                 <div class="input-row">
                     <div>
                     <label for="fName">First Name</label><br>
-                    <input type="text" id="fName" name="fName" placeholder="First Name" class="input-text" required>
+                    <input type="text" id="fName" name="fName" placeholder="First Name" class="input-text" required disabled>
                     </div>
                     <div>
                     <label for="lName">Middle Name</label><br>
-                    <input type="text" id="lName" name="lName" class="input-text" required>
+                    <input type="text" id="lName" name="lName" placeholder="Middle Name" class="input-text" required disabled>
                     </div>
                     <div>
                     <label for="email">Surname</label><br>
-                    <input type="text" id="surname" name="surname"  class="input-text" required>
+                    <input type="text" id="surname" name="surname" placeholder="Surname" class="input-text" required disabled>
                     </div>
                     <div>
                     <label for="suffix">Suffix</label><br>
-                    <select id="suffix" name="suffix"  class="input-text">
+                    <select id="suffix" name="suffix"  class="input-text" disabled>
                         <option value="">Select suffix</option>
                         <option value="Jr.">Jr.</option>
                         <option value="Sr.">Sr.</option>
@@ -81,18 +86,18 @@
                 <div class="input-row">
                 <div> 
                     <label for="sex">Sex</label><br>
-                    <input type="radio" id="male" name="sex" value="male" class="input-radio">
+                    <input type="radio" id="male" name="sex" value="male" class="input-radio" disabled>
                     <label for="male">Male</label>
-                    <input type="radio" id="female" name="sex" value="female" class="input-radio">
+                    <input type="radio" id="female" name="sex" value="female" class="input-radio" disabled>
                     <label for="female">Female</label>
                 </div>
                 <div>
                     <label for="DOB">Date of Birth</label><br>
-                    <input type="date" id="DOB" name="DOB" class="input-text" required>
+                    <input type="date" id="DOB" name="DOB" class="input-text" required disabled>
                 </div>
                 <div>
                     <label for="maritalStatus">Marital Status</label></label><br>
-                    <select id="maritalStatus" name="maritalStatus" class="input-text">
+                    <select id="maritalStatus" name="maritalStatus" class="input-text" disabled>
                         <option value="">Select marital status</option>
                         <option value="single">Single</option>
                         <option value="married">Married</option>
@@ -102,7 +107,7 @@
                 </div>
                 <div>
                     <label for="contactNo">Contact Number</label><br>
-                    <input type="tel" id="contactNo" name="contactNo" required class="input-text">
+                    <input type="tel" id="contactNo" name="contactNo" placeholder="09**********" class="input-text"required disabled>
                 </div>
                 </div>
 
@@ -111,19 +116,19 @@
 
                 <div>
                 <label for="homeNo">Home Number</label><br>
-                <input type="text" id="homeNo" name="homeNo" class="input-text" required>
+                <input type="text" id="homeNo" name="homeNo" class="input-text" required disabled>
                 </div>
                 <div>
                 <label for="street">Street</label><br>
-                <input type="text" id="street" name="street" class="input-text" required>
+                <input type="text" id="street" name="street" class="input-text" required disabled>
                 </div>
                 <div>
                 <label for="baranggay">Baranggay</label><br>
-                <input type="text" id="baranggay" name="baranggay" class="input-text" required>
+                <input type="text" id="baranggay" name="baranggay" class="input-text" required disabled>
                 </div>
                 <div>
                 <label for="city">City</label><br>
-                <input type="text" id="city" name="city" class="input-text" required>
+                <input type="text" id="city" name="city" class="input-text" required disabled>
                 </div>
 
                 </div>
@@ -131,11 +136,11 @@
                     
                 <div>
                 <label for="province">Province</label><br>
-                <input type="text" id="province" name="province" class="input-text" required>
+                <input type="text" id="province" name="province" class="input-text" required disabled>
                 </div>
                 <div>
                 <label for="region">Region</label><br>
-                <input type="text" id="region" name="region" class="input-text" required>
+                <input type="text" id="region" name="region" class="input-text" required disabled>
                 </div>
 
                 </div>
@@ -145,7 +150,7 @@
 
                     <div>
                     <label for="idType">Type of ID</label><br>
-                    <select name="idType" id="idType" class="input-text">
+                    <select name="idType" id="idType" class="input-text" disabled>
                         <option value="SSS">SSS</option>
                         <option value="TIN">TIN</option>
                         <option value="PAGIBIG">PAGIBIG</option>
@@ -162,15 +167,17 @@
                     </div>
                     <div>
                     <label for="idNo">ID Number</label><br>
-                    <input type="text" id="idNo" name="idNo" class="input-text" required >
+                    <input type="text" id="idNo" name="idNo" class="input-text" required disabled>
                     </div>
                     <div>
                         <label for="expiryDate">Expiry Date</label><br>
-                        <input type="date" id="expiryDate" name="expiryDate" class="input-text" required>
+                        <input type="date" id="expiryDate" name="expiryDate" class="input-text" required disabled>
                     </div>
                     <div>
                         <label for="photo">Upload photo of ID</label><br>
-                        <input type="file" id="idPhoto" name="idPhoto" >
+                        <input type="file" accept="image/*" id="idPhoto" name="idPhoto">
+                        <div id="idPhotoPreview"></div>
+
                     </div>
 
                 </div>
@@ -179,25 +186,25 @@
                 <div class="input-row">
                     <div>
                         <label for="employerName">Name of Employer</label><br>
-                        <input type="text" id="employerName" name="employerName" class="input-text" required>
+                        <input type="text" id="employerName" name="employerName" class="input-text" required disabled>
                     </div>
                     <div>
                         <label for="noOfYearsWorked">No. of Years with Employer</label><br>
-                        <input type="number" id="noOfYearsWorked" class="input-text" name="noOfYearsWorked" required>
+                        <input type="number" id="noOfYearsWorked" class="input-text" name="noOfYearsWorked" required disabled>
                     </div>
                     <div>
                         <label for="position">Position</label><br>
-                        <input type="text" id="position" name="position" class="input-text">
+                        <input type="text" id="position" name="position" class="input-text" disabled>
                     </div>
                     <div>
                         <label for="phoneNoEmployer">Employer's Phone Number</label><br>
-                        <input type="tel" id="phoneNoEmployer" name="phoneNoEmployer" class="input-text">
+                        <input type="tel" id="phoneNoEmployer" name="phoneNoEmployer" class="input-text" disabled>
                     </div>
                 </div>
                 <div class="input-row">
                     <div>
                         <label for="salary">Salary</label><br>
-                        <input type="number" id="salary" name="salary" class="input-text">
+                        <input type="number" id="salary" name="salary" class="input-text" disabled>
                     </div>
                 </div>
 
@@ -205,29 +212,29 @@
                 <div class="input-row">
                     <div>
                     <label for="homeNo">Home Number</label><br>
-                    <input type="text" id="homeNo" name="homeNo" class="input-text" required>
+                    <input type="text" id="homeNo" name="homeNo" class="input-text" required disabled>
                     </div>
                     <div>
                     <label for="street">Street</label><br>
-                    <input type="text" id="street" name="street" class="input-text" required>
+                    <input type="text" id="street" name="street" class="input-text" required disabled>
                     </div>
                     <div>
                     <label for="baranggay">Baranggay</label><br>
-                    <input type="text" id="baranggay" name="baranggay" class="input-text" required>
+                    <input type="text" id="baranggay" name="baranggay" class="input-text" required disabled>
                     </div>
                     <div>
                     <label for="city">City</label><br>
-                    <input type="text" id="city" name="city" class="input-text" required>
+                    <input type="text" id="city" name="city" class="input-text" required disabled>
                     </div>
                 </div>
                 <div class="input-row-few">
                     <div>
                     <label for="province">Province</label><br>
-                    <input type="text" id="province" name="province" class="input-text" required>
+                    <input type="text" id="province" name="province" class="input-text" required disabled>
                     </div>
                     <div>
                     <label for="region">Region</label><br>
-                    <input type="text" id="region" name="region" class="input-text" required>
+                    <input type="text" id="region" name="region" class="input-text" required disabled>
                     </div>
                 </div>
 
@@ -235,7 +242,7 @@
                 <div class="input-row">
                     <div>
                     <label for="insuranceType">Type of Insurance</label><br>
-                    <select name="insuranceType" id="insuranceType" class="input-text">
+                    <select name="insuranceType" id="insuranceType" class="input-text" disabled>
                         <option value="Health Insurance">Health Insurance</option>
                         <option value="Life Insurance">Life Insurance</option>
                         <option value="Single Premium">Single Premium</option>
@@ -245,25 +252,26 @@
                     </div>
                     <div>
                         <label for="issuedDate" >Date Issued</label><br>
-                        <input type="date" id="issuedDate" name="issuedDate" class="input-text">
+                        <input type="date" id="issuedDate" name="issuedDate" class="input-text" disabled>
                     </div>
                     <div>
                         <label for="expiryDate">Expiry Date</label><br>
-                        <input type="date" id="expiryDate" name="expiryDate" class="input-text">
+                        <input type="date" id="expiryDate" name="expiryDate" class="input-text" disabled>
                     </div>
                     <div>
                         <label for="uploadInsurance">Upload Insurance</label><br>
-                        <input type="file">
+                        <input type="file" id="insurancePhoto" accept="image/*">
+                        <div id="insurancePhotoPreview"></div>
                     </div>
                 </div> 
                 <div class="input-row-few">
                     <div>
                         <label for="dependentName">Name of Dependent</label><br>
-                        <input type="text" id="dependentName" name="dependentName" class="input-text">
+                        <input type="text" id="dependentName" name="dependentName" class="input-text" disabled>
                     </div>
                     <div>
                         <label for="dependentContactNo">Dependent Contact No.</label><br>
-                        <input type="tel" class="input-text">
+                        <input type="tel" class="input-text" disabled>
                     </div>
                 </div>
 
@@ -271,7 +279,8 @@
                 <div class="input-row">
                     <div>
                         <label for="collateral">Upload Pictures of Collateral</label><br>
-                        <input type="file" multiple>
+                        <input type="file" accept="image/*" id="collateral" multiple>
+                        <div id="collateral-preview"></div> <!-- Add this div for preview -->
                     </div>
                 </div> 
             <div class="button-container">
@@ -292,7 +301,7 @@
         </div>
 
         <div class="table-button-add">
-            <button>Add new</button>
+            <button id="addBtn">Add new</button>
         </div>
     </div>
     <table>
@@ -309,14 +318,19 @@
 
         </tr>
         <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>123 Main St</td>
+            <td>01/30/2025</td>
+            <td>03/30/2025</td>
+            <td>0130202545</td>
+            <td>Loan</td>
+            <td>20,000</td>
+            <td>7%</td>
+            <td><button>View</button></td>
+            <td><button>View</button></td>
+            <td>10,000</td>
         </tr>
-        <tr>
-            <td>Jane</td>
-            <td>Doe</td>
     </table>
 </div>
 </body>
+  <!-- Javascript -->
+  <script src="scripts/dashboard.js"></script>
 </html>

@@ -95,6 +95,16 @@ body{
     width: 90%;
     margin: 0 auto;
 }
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
 .input-row{
     display: flex;
     flex-direction: row;
@@ -118,6 +128,7 @@ body{
     margin-top: 20px;
 }
 .confirmBtn{
+    display: none;
     background-color: #1E3E62;
     color: white;
     padding: 10px 40px;
@@ -223,7 +234,7 @@ th{
 }
 td{
     display: table-cell;
-    text-align: inherit;
+    text-align: center;
     vertical-align: inherit;
     border-color: inherit;
     padding: 20px;
@@ -259,4 +270,11 @@ tr{
     display: flex;
     gap: 10px;
 }
-
+#addBtn{
+    display: none;
+}
+.active{
+    background-color: #1E3E62;
+    color: white;
+    border-radius: 15px;
+}
