@@ -12,6 +12,8 @@ let insurancePhotoInput = document.getElementById('insurancePhoto');
 let insurancePhotoPreview = document.getElementById('insurancePhotoPreview');
 let imgInput = document.querySelectorAll('.img-input');
 
+const zooming = new Zooming();
+
 addbtn.addEventListener('click',function(){
     console.log('clicked add button');
     addbtn.innerText= addbtn.innerText === "Add" ? "Cancel" : "Add";
@@ -44,9 +46,14 @@ idPhotoInput.addEventListener('change',function(){
         img.src = e.target.result;
         img.style.maxWidth = '200px';
         img.style.margin = '10px';
+        img.classList.add('zoomable');
         idPhotoPreview.appendChild(img);
+        zooming.listen(img);
     };
     reader.readAsDataURL(file);
+});
+idPhotoPreview.addEventListener('click',function(){
+   
 });
 
 insurancePhotoInput.addEventListener('change',function(){
@@ -58,7 +65,9 @@ insurancePhotoInput.addEventListener('change',function(){
         img.src = e.target.result;
         img.style.maxWidth = '200px';
         img.style.margin = '10px';
+        img.classList.add('zoomable');
         insurancePhotoPreview.appendChild(img);
+        zooming.listen(img);
     };
     reader.readAsDataURL(file);
 });
@@ -74,7 +83,9 @@ collateralInput.addEventListener('change', function() {
             img.src = e.target.result;
             img.style.maxWidth = '200px';
             img.style.margin = '10px';
+            img.classList.add('zoomable');
             collateralPreview.appendChild(img);
+            zooming.listen(img);
         };
         reader.readAsDataURL(file);
     }
