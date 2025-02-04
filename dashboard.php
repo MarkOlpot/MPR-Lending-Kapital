@@ -296,10 +296,10 @@
 <div class="table-container">
     <div class="table-button-container">
         <div class="table-button-group">
-        <button>All</button>
-        <button>Payment</button>
-        <button>Loan</button>
-        <button>Grocery Item</button>
+        <button id="tblAllBtn" class="active">All</button>
+        <button id="tblPaymentBtn">Payment</button>
+        <button id="tblLoanBtn">Loan</button>
+        <button id="tblGroceryBtn">Grocery Item</button>
         </div>
 
         <div class="table-button-add">

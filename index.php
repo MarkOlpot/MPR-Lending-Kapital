@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +29,11 @@
             <br>
             <input type="password" name="password" id="password" placeholder="Please enter your password" required>
             <a href="#" class="forgot-password">Forgot Password?</a>
-            <p>Don't have an account? <a href="#">Signup!</a></p>
             <input type="submit" value="Log-in">
+
+            <div class="signup-container">
+            <p>Don't have an account? <a href="signup.php">Signup!</a></p>
+            </div>
         </div>
         </form>
     </div>

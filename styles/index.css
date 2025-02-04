@@ -6,12 +6,20 @@ body{
     display: flex;
     height: 98vh;
 }
+a {
+    color: #1E3E62; /* Use the inherited color */
+}
+
+a:active,
+a:focus {
+    color: inherit; /* Ensure the color does not change */
+}
 .login-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     border: 1px solid black;
-    margin: 10rem auto;
+    margin: 8rem auto;
     width: 856px;
     height: 606px;
     border-radius: 50px;
@@ -55,6 +63,7 @@ input[type="text"], input[type="password"]{
 input[type="submit"]{
     font-weight: 1000;
     font-size: 30px;
+    margin-top: 10px;
     height: 60px;
     width: 100%;
     padding: 10px 20px;
@@ -66,4 +75,8 @@ input[type="submit"]{
 .strong{
     font-weight: 500;
     font-size:20px;
+}
+.signup-container{
+
+text-align: center;
 }

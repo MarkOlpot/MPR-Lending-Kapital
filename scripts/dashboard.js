@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function() {
+
 const addbtn = document.getElementById('add-btn');
 let editbtn = document.getElementById('edit-btn');
 let deletebtn = document.getElementById('delete-btn');
@@ -89,4 +91,52 @@ collateralInput.addEventListener('change', function() {
         };
         reader.readAsDataURL(file);
     }
+}, false);
+
+
+
+// Javascript for the table
+const tableAllBtn = document.getElementById('tblAllBtn');
+let tableAddBtn = document.getElementById('addBtn');
+const tablePaymentBtn = document.getElementById('tblPaymentBtn');
+const tableLoanBtn = document.getElementById('tblLoanBtn');
+const tableGroceryBtn = document.getElementById('tblGroceryBtn');
+
+
+tableAllBtn.addEventListener('click', function() {
+    tableAddBtn.style.display = 'none';
+    tableAllBtn.classList.add('active');
+    tableLoanBtn.classList.remove('active');
+    tableGroceryBtn.classList.remove('active');
+    tablePaymentBtn.classList.remove('active');
+
 });
+tablePaymentBtn.addEventListener('click', function() {
+    tableAddBtn.style.display = 'block';
+    tableAddBtn.innerHTML = 'Add New Payment';
+    tablePaymentBtn.classList.add('active');
+    tableLoanBtn.classList.remove('active');
+    tableGroceryBtn.classList.remove('active');
+    tableAllBtn.classList.remove('active');
+});
+tableLoanBtn.addEventListener('click', function() { 
+    tableAddBtn.style.display = 'block';
+    tableAddBtn.innerHTML = 'Add New Loan';
+    tableLoanBtn.classList.add('active');
+    tableGroceryBtn.classList.remove('active');
+    tablePaymentBtn.classList.remove('active');
+    tableAllBtn.classList.remove('active');
+
+});
+tableGroceryBtn.addEventListener('click', function() {
+    tableAddBtn.style.display = 'block';
+    tableAddBtn.innerHTML = 'Add New Grocery';
+    tableGroceryBtn.classList.add('active');
+    tableLoanBtn.classList.remove('active');
+    tablePaymentBtn.classList.remove('active');
+    tableAllBtn.classList.remove('active');
+});
+
+});
+
+
