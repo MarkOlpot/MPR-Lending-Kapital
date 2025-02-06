@@ -60,24 +60,24 @@
 
         <div class="form-container">
             <h1>Personal Information</h1>
-            <form action="#" method="post">
-                <div class="input-row">
+            <form action="submit.php" method="post" enctype="multipart/form-data">
+            <div class="input-row">
                     <div>
                     <label for="fName">First Name</label><br>
                     <input type="text" id="fName" name="fName" placeholder="First Name" class="input-text" required disabled>
                     </div>
                     <div>
-                    <label for="lName">Middle Name</label><br>
-                    <input type="text" id="lName" name="lName" placeholder="Middle Name" class="input-text" required disabled>
+                    <label for="mName">Middle Name</label><br>
+                    <input type="text" id="mName" name="mName" class="input-text" required disabled>
                     </div>
                     <div>
                     <label for="email">Surname</label><br>
-                    <input type="text" id="surname" name="surname" placeholder="Surname" class="input-text" required disabled>
+                    <input type="text" id="surname" name="surname"  class="input-text" required disabled>
                     </div>
                     <div>
                     <label for="suffix">Suffix</label><br>
-                    <select id="suffix" name="suffix"  class="input-text" disabled>
-                        <option value="">Select suffix</option>
+                    <select id="suffix" name="suffix"  class="input-text"  disabled>
+                        <option value="">None</option>
                         <option value="Jr.">Jr.</option>
                         <option value="Sr.">Sr.</option>
                         <option value="II">II</option>
@@ -261,30 +261,29 @@
                         <input type="date" id="expiryDate" name="expiryDate" class="input-text" disabled>
                     </div>
                     <div>
-                        <label for="uploadInsurance">Upload Insurance</label><br>
-                        <input type="file" id="insurancePhoto" class="img-input" accept="image/*" disabled>
+                    <label for="uploadInsurance">Upload Insurance</label><br>
+            <input type="file" id="uploadInsurance" name="uploadInsurance" class="img-input" required disabled>
                         <div id="insurancePhotoPreview"></div>
                     </div>
                 </div> 
                 <div class="input-row-few">
-                    <div>
-                        <label for="dependentName">Name of Dependent</label><br>
-                        <input type="text" id="dependentName" name="dependentName" class="input-text" disabled>
-                    </div>
-                    <div>
-                        <label for="dependentContactNo">Dependent Contact No.</label><br>
-                        <input type="tel" class="input-text" disabled>
-                    </div>
-                </div>
-
-            <h1>Collateral</h1>  
-                <div class="input-row">
-                    <div>
-                        <label for="collateral">Upload Pictures of Collateral</label><br>
-                        <input type="file" accept="image/*" class="img-input" id="collateral" multiple disabled>
-                        <div id="collateral-preview"></div> <!-- Add this div for preview -->
-                    </div>
-                </div> 
+        <div>
+            <label for="dependentName">Name of Dependent</label><br>
+            <input type="text" id="dependentName" name="dependentName" class="input-text" required disabled>
+        </div>
+        <div>
+            <label for="dependentContactNo">Dependent Contact No.</label><br>
+            <input type="tel" id="dependentContactNo" name="dependentContactNo" placeholder="09**********" class="input-text" required disabled>
+        </div>
+    </div>
+    <h1>Collateral</h1>
+    <div class="input-row">
+        <div>
+            <label for="collateral">Upload Pictures of Collateral</label><br>
+            <input type="file" name="collateral[]" class="img-input" id="collateral" multiple disabled>
+            <div id="collateral-preview"></div> 
+        </div>
+    </div>
             <div class="button-container">
             <input type="submit" value="Confirm" class="confirmBtn">
             </div>
